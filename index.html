@@ -242,7 +242,6 @@ function drawKids(){
 function setPrez(i,v){copii[i].prezent=v;save();drawKids()}
 function setEmo(i,e){copii[i].emotie=e;save();drawKids()}
 function stergeCopil(i){copii.splice(i,1);save();drawKids()}
-function stergeCopil(i){copii.splice(i,1);save();drawKids()}
 drawKids();
 
 /* ANOTIMP */
@@ -331,7 +330,7 @@ function colecteazaTot(){
 function aplicaTot(d){
  copii=d.copii||[];
  anotimp=d.anotimp||"";
- anot=d.anot||d.anotimpuri||anot;
+ anot=d.anot||anot;
  vreme=d.vreme||"";
  drawKids();drawAn();drawVreme();
  if(anotimp)selAn(anotimp);
@@ -359,6 +358,7 @@ document.getElementById("importFile").addEventListener("change",function(){
  r.onload=e=>aplicaTot(JSON.parse(e.target.result));
  r.readAsText(f);
 });
+
 
 /* ✅ ADAUGAT: incarcare automata din date.json (fara Import manual) */
 window.addEventListener("DOMContentLoaded", async () => {
@@ -405,6 +405,7 @@ function resetZiNoua(){
   raport.innerHTML = "";
 }
 </script>
+
 
 </body>
 </html>
