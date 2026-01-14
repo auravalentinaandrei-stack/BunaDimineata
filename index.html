@@ -330,7 +330,7 @@ function colecteazaTot(){
 function aplicaTot(d){
  copii=d.copii||[];
  anotimp=d.anotimp||"";
- anot=d.anot||anot;
+ anot=d.anot||d.anotimpuri||anot;
  vreme=d.vreme||"";
  drawKids();drawAn();drawVreme();
  if(anotimp)selAn(anotimp);
