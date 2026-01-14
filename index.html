@@ -242,6 +242,7 @@ function drawKids(){
 function setPrez(i,v){copii[i].prezent=v;save();drawKids()}
 function setEmo(i,e){copii[i].emotie=e;save();drawKids()}
 function stergeCopil(i){copii.splice(i,1);save();drawKids()}
+function stergeCopil(i){copii.splice(i,1);save();drawKids()}
 drawKids();
 
 /* ANOTIMP */
@@ -359,7 +360,6 @@ document.getElementById("importFile").addEventListener("change",function(){
  r.readAsText(f);
 });
 
-
 /* ✅ ADAUGAT: incarcare automata din date.json (fara Import manual) */
 window.addEventListener("DOMContentLoaded", async () => {
   const data = await incarcaDateDinFisier();
@@ -405,7 +405,6 @@ function resetZiNoua(){
   raport.innerHTML = "";
 }
 </script>
-
 
 </body>
 </html>
